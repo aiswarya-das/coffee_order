@@ -1,0 +1,68 @@
+
+<b><p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Welcome {{name}}, <br><br>
+</b>   
+
+<h2>Customize your coffee</h2><br>
+
+<style>
+    form {
+        width: 50%;
+
+        margin: 10px 50px;
+
+        text-align: left;
+
+      }
+      h2{
+        margin: 5px 50px;
+      }
+  
+
+      button {
+        background-color: #04AA6D;
+       color: white;
+        padding: 12px 20px ;
+       margin: 12px auto;
+       border: none;
+       cursor: pointer;
+       width: 30%;
+       opacity: 0.9;
+     
+      }
+</style>
+</p>
+<form action="/message/" method="POST">
+    {% csrf_token %}
+
+<label>Type of coffee
+    <select id="coffee" name="coffee"  required>
+      <option value="" selected="selected">--choose coffee--</option>
+      <option value="Regular coffee">Regular coffee</option>
+      <option value="Caffe Latte">Caffe Latte</option>
+      <option value="Cafe Mocha">Cafe Mocha</option>
+      <option value="Cappuccino">Cappuccino</option>
+      <option value="Cold brew">Cold brew</option>
+      <option value="Espresso">Espresso</option>
+      <option value="Frappe">Frappe</option>
+      <option value="Irish Coffee">Irish Coffee</option>
+      <option value="Iced Latte">Iced Latte</option>
+    </select>
+</label>
+<br><br>
+<label> Method of preparation
+    <select id="method" name="method"  required>
+      <option value="" selected="selected">--method--</option>
+      <option value="Regular">Regular </option>
+      <option value="Black">Black</option>
+      <option value="decaf">decaf</option>
+      <option value="Extra foam">Extra foam</option>
+      <option value="Extra strong">Extra strong</option>
+    </select>
+</label>
+<br><br>
+
+<textarea name="instruction" id="" cols="30" rows="3">Any special instruction ?</textarea>
+<br><br>
+<button type="submit" name="submit" value="submit">Place order</button>
+
+</form>

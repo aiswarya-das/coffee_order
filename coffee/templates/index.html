@@ -1,0 +1,46 @@
+<title>coffee order </title>
+<center><h3>Details</h3></center>
+<style>
+     form {
+        width: 30%;
+
+        margin: 8px auto;
+
+        padding: 20px 150px 80px 120px;
+
+        text-align: center;
+
+      }
+      button {
+        background-color: #04AA6D;
+       color: white;
+        padding: 12px 20px ;
+       margin: 12px auto;
+       border: none;
+       cursor: pointer;
+       width: 30%;
+       opacity: 0.9;
+     
+      }
+      input{
+        padding: 10px 23px;
+         margin: 12px 0;
+      }
+      label{
+        padding: 8px 12px;
+        font-family: Georgia;
+      }
+</style>
+<form action="/welcome/" method="post">
+    {% csrf_token %}
+    <table>
+        {{ form.as_table}}
+    </table>
+   
+  
+      
+        
+<button type="Submit" value="Submit">Customize</button>
+
+
+</form>
